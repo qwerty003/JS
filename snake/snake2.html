@@ -1,0 +1,113 @@
+<html>
+<body>
+<head>
+<link rel = "stylesheet" type = "text/css" href = "snake2.css"/>
+</head>
+<body>
+
+<script>
+let obj = document.getElementById("o");
+let l = 0;let t = 0;
+let x,y;
+window.addEventListener("keydown", event => {
+  let obj = document.getElementById("o");
+  switch(event.key){
+  case "w":
+    up();
+	break;
+  case "a":
+    left();
+	break;
+  case "s":
+    down();
+	break;
+  case "d":
+    right();
+	break;
+  }
+ 
+});
+
+
+function down()
+{
+    window.addEventListener("keydown", event => {
+	    if(event.key == "w")
+	    window.cancelAnimationFrame(y);
+	
+	});
+    let obj = document.getElementById("o");
+    t += 3;
+    obj.style.top = t + "px";
+	let y = requestAnimationFrame(down);
+
+}
+
+function up()
+{
+    window.addEventListener("keydown", stopy => {
+	    window.cancelAnimationFrame(y);
+	
+	});
+    let obj = document.getElementById("o");
+    t -= 3;
+    obj.style.top = t + "px";
+	let y = requestAnimationFrame(up);
+
+}
+
+function left()
+{
+    window.addEventListener("keydown", stopx => {
+	    window.cancelAnimationFrame(x);
+	
+	});
+    let obj = document.getElementById("o");
+    l -= 3;
+    obj.style.left = l + "px";
+	let x = requestAnimationFrame(left);
+
+}
+
+function right()
+{
+    window.addEventListener("keydown", stopx => {
+	    window.cancelAnimationFrame(x);
+	
+	});
+    let obj = document.getElementById("o");
+    l += 3;
+    obj.style.left = l + "px";
+	let x = requestAnimationFrame(right);
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class = "object" id = "o">
+
+</body>
+</html>

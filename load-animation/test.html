@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset = "utf-8">
+<link rel = "stylesheet" type = "text/css" href = "animation.css"/>
+<title>
+Test
+</title>
+</head>
+<body>
+
+<script>
+let wid=0;
+function trans()
+{
+    let r = document.getElementById("r");
+    let b = document.getElementById("b");
+	r.style.width = (100-wid) + "%";
+	b.style.width = wid + "%";
+	wid+=1;
+	if (wid<=100) requestAnimationFrame(trans);
+}
+
+function s()
+{
+    requestAnimationFrame(trans);
+}
+
+
+
+
+
+</script>
+
+
+<div class = "container" onclick = "trans()">
+
+    <div id = "r" style = "background-color:red";> </div>
+    <div id = "b" style = "background-color:purple";> </div>
+	
+
+</div>
+</body>
+</html>

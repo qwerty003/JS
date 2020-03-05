@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta charset = "utf-8">
+<link rel = "stylesheet" type = "text/css" href = "animation.css"/>
+<title>
+Animation
+</title>
+</head>
+<body>
+
+<script>
+let t = 0;
+let lef = 0;
+let hit = 5;
+let wid = 5;
+
+function a()
+{
+    let obj = document.getElementById("o");
+    wid += 1;
+    //hit += 1;
+    if (wid< 100) obj.style.width = wid + "%";
+    if (wid>= 100){
+	    hit += 5;
+		obj.style.height = hit + "%";
+	    wid = 0;
+	}
+	//obj.style.height = hit + 'px';
+    //obj.style.width = wid + '%';
+	
+	requestAnimationFrame(a);
+	
+}
+
+function b()
+{
+    requestAnimationFrame(a);
+
+}
+
+
+
+</script>
+
+
+<div class = "content">
+    <div class = "object" id = "o" onclick = "b()">
+	
+	</div>
+
+</div>
+</body>
+</html>

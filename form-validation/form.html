@@ -1,0 +1,69 @@
+<!doctype html >
+<html>
+<head>
+<meta charset = "utf-8">
+<link rel = "stylesheet" type = "text/css" href = "form.css" />
+<title>
+Sign - Up
+</title>
+</head>
+<body>
+<script>
+function change(){
+    document.getElementById("test").style.color = "red";
+}
+function test1(){
+    let elem = document.getElementById("name");
+	elem.style.background = "rgb(200,200,200)";
+	elem.placeholder = "";
+	
+}
+function test2(){
+    document.getElementById("name").placeholder = "Enter your name here";
+}
+function test3(){
+    let inputs = document.getElementsByTagName("p");
+	inputs[0].innerHTML = "It works"; 
+	
+}
+function test4(){
+    let elem = document.getElementById("aa");
+	elem.innerHTML = "It works";
+}
+</script>
+
+<noscript>
+
+Alert! Your browser doesn't support javascript.
+
+</noscript>
+<h1 id = "test" onclick = "change()"> Sign - up </h1>
+<div class = "content">
+<form action = "form.php" method = "POST">
+<h1 id = "test"> Sign - up </h1>
+<br> <br> <br> <br>
+<div class = "main"><br><br><center>
+    <p> hello </p>
+    First Name : <input type = "text" name = "t1" id = "name" placeholder="" onclick = "test1()" onmouseover = "test2()" onmouseout = "test1()"/><br><br>
+    Password : <input type = "password" name = "t2"/><br></br>
+    Address : <textarea rows = "2" cols = "20" name = "t3" value = "default"></textarea><br><br>
+	Gender : <input type = "radio" name = "personal_r1" value = "male"/>Male <input type = "radio" name = "personal_r1" value = "female"/>Female<br><br>
+	Sports : <input type = "checkbox" value = "cricket"/>Cricket
+             <input type = "checkbox" value = "badminton"/>Badminton
+             <input type = "checkbox" value = "tennis"/>Tennis
+             <input type = "checkbox" value = "football"/>Football <br><br>
+	Country:  <select name = "country"><option value = "india">India<option value = "france">France</select><br><br>
+	File : <input type = "file" >
+	<p> Hoy </p>
+	<br> <br>
+	<p id = "aa"> this text is also there </p>
+	</center>
+</div>
+<br><br>
+<center>
+<button type = "button" name = "s1" onclick = "test3()"> CHANGE </button>
+</center>
+</div>
+</form>
+</body>
+</html>

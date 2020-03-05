@@ -1,0 +1,77 @@
+body{
+	background:url(form.jpg);
+	
+}
+
+.main{
+	display:block;
+	margin-right:35%;
+	margin-left:40%;
+	height:400px;
+	background:rgb(0,0,0,0.5);
+	color:gray;
+	font-size:15;
+	padding:10px;
+}
+
+.left{
+	display:block;
+	float:left;
+	margin:5px;
+}
+
+.right{
+	display:block;
+	float:right;
+	margin:5px;
+}
+
+#input{
+	width:100%;
+	
+	
+}
+#output{
+	float:right;
+	width:50%;
+	height:30px;
+	background-color:rgb(200,200,200);
+	
+	
+}
+input[type ='text'],input[type ='password']{
+	height :38px;
+	width :200px;
+	margin:5px;
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+}
+input[type ='submit']{
+	margin-left:auto;
+	margin-right:auto;
+	height:30px;
+	width:10%;
+	background:black;
+	border:none;
+    color:white;
+}
+.num{
+	display:block;
+	float:left;
+	height:50px;
+	width:50px;
+	
+}
+select{
+    height :32px;
+	width :170px;
+	margin:5px;
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+	color:black;
+	
+}
+	
+	

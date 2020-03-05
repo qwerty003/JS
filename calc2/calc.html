@@ -1,0 +1,109 @@
+<!doctype html >
+<html>
+<head>
+<meta charset = "utf-8">
+<link rel = "stylesheet" type = "text/css" href = "calc.css" />
+<title>
+Sign - Up
+</title>
+</head>
+<body>
+<script>
+
+function test3(val){
+    let inp = document.getElementById("input");
+    let out = document.getElementById("output");
+	prev = inp.value;
+	if(val == 'x'){
+		str = prev.slice(0,str.length-1);
+	}
+	else{
+	    str = (prev + val);
+	}
+	inp.value = (str);
+	out.value = (eval(str));
+	
+	
+}
+
+function op(){
+    let inp = document.getElementById("input");
+    let out = document.getElementById("output");
+	val = out.value;
+	inp.value = (val);
+	out.value = ("");
+	
+
+}
+
+
+function text(){
+    let inp = document.getElementById("input");
+    let out = document.getElementById("output");
+	str = inp.value;
+	out.value = (eval(str));
+
+}
+
+function test(){
+    doc = document;
+    let elems = document.body.getElementsByTagName("input");
+    let out = document.getElementById("output");
+	let len = elems.length;
+	out.value = (len);
+	elems[0].remove();
+	out.value = (len);
+	
+}
+
+
+</script>
+
+<center>
+<br> <br> <br> <br> <br>
+
+  <div class = "main">
+  <input type = "text" name = "t1" id = "input" onkeypress = "text()"/><br>
+  <input type = "text" name = "t1" id = "output" disabled/><br><br>
+  
+    <div class = "left">
+  
+    <button type = "button" name = "s1" class = "num" id = "butt" onclick = "test3(7)"> 7 </button>
+    <button type = "button" name = "s1" class = "num" onclick = "test3(8)"> 8 </button>
+    <button type = "button" name = "s1" class = "num" onclick = "test3(9)"> 9 </button>
+    <br><br><br>
+    <button type = "button" name = "s1" class = "num" onclick = "test3(4)"> 4 </button>
+    <button type = "button" name = "s1" class = "num" onclick = "test3(5)"> 5 </button>
+    <button type = "button" name = "s1" class = "num" onclick = "test3(6)"> 6 </button>
+    <br><br><br>
+    <button type = "button" name = "s1" class = "num" onclick = "test3(1)"> 1 </button>
+    <button type = "button" name = "s1" class = "num" onclick = "test3(2)"> 2 </button>
+    <button type = "button" name = "s1" class = "num" onclick = "test3(3)"> 3 </button>
+    <br><br><br>
+    <button type = "button" name = "s1" class = "num" onclick = "test3(0)"> 0 </button>
+    <button type = "button" name = "s1" class = "num" onclick = "test3('\.')"> . </button>
+    <button type = "button" name = "s1" class = "num" onclick = "op()"> = </button>
+    <br><br><br>
+	
+	</div>
+	
+	<div class = "right">
+	<button type = "button" name = "s1" class = "num" onclick = "test3('\+')"> + </button>
+	<button type = "button" name = "s1" class = "num" onclick = "test3('\-')"> - </button><br>
+	<button type = "button" name = "s1" class = "num" onclick = "test3('\*')"> x </button>
+	<button type = "button" name = "s1" class = "num" onclick = "test3('\/')"> / </button><br>
+	<button type = "button" name = "s1" class = "num" onclick = "test3('x')"> Clear </button>
+	
+	
+	</div>
+	<br><br>
+	<button type = "button" name = "s1" class = "num" onclick = "test()"> Show </button>
+	
+  
+  
+
+  </div>
+</center>
+</form>
+</body>
+</html>
